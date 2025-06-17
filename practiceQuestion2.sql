@@ -2,6 +2,8 @@
 Write a query to find average marks in each city in ascending order.
 */
 
+USE college1;
+
 SELECT city, AVG(marks)
 FROM student1
 GROUP BY city
