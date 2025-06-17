@@ -109,3 +109,20 @@ SELECT city, AVG(marks)
 FROM student1
 GROUP BY city;
 
+
+/*.......HAVING CLAUSE.......
+# count no of students in each city where max marks cross 90 ....*/
+USE college1;
+
+SELECT city, COUNT(name)
+FROM student1
+GROUP BY city
+HAVING MAX(marks) > 90;
+
+SELECT city
+FROM student1
+WHERE grade = "A"
+GROUP BY city
+HAVING MAX(marks) >= 93
+ORDER BY city ASC;
+
