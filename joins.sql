@@ -115,3 +115,14 @@ ON a.id = b.manager_id;
 
 
 
+/* ....................................UNION.................................*/
+
+SELECT name FROM employee
+UNION 
+SELECT name FROM employee; /* ...UNION didn't gave duplicate values */
+
+SELECT name FROM employee
+UNION ALL
+SELECT name FROM employee; /* ...UNION ALL gave duplicate values */
+
+
